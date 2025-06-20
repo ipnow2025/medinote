@@ -665,7 +665,7 @@ export default function MedicalRecordsPage() {
 
       {/* 상세보기 모달 */}
       <Dialog open={showDetailModal} onOpenChange={setShowDetailModal}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-white dark:bg-white">
           <DialogHeader>
             <DialogTitle className="flex items-center space-x-2 text-xl">
               <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
@@ -678,38 +678,38 @@ export default function MedicalRecordsPage() {
             <div className="space-y-6">
               {/* 기본 정보 */}
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-3">기본 정보</h3>
+                <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-3">기본 정보</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-sm text-gray-600 dark:text-gray-400">진료 날짜:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">
+                      <span className="text-sm text-gray-600 dark:text-gray-600">진료 날짜:</span>
+                      <span className="font-medium text-gray-900 dark:text-gray-900">
                         {format(selectedRecord.date, "yyyy년 MM월 dd일", { locale: ko })}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-sm text-gray-600 dark:text-gray-400">병원:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{selectedRecord.hospital}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-600">병원:</span>
+                      <span className="font-medium text-gray-900 dark:text-gray-900">{selectedRecord.hospital}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-sm text-gray-600 dark:text-gray-400">담당의:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{selectedRecord.doctor}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-600">담당의:</span>
+                      <span className="font-medium text-gray-900 dark:text-gray-900">{selectedRecord.doctor}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-sm text-gray-600 dark:text-gray-400">진료과:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{selectedRecord.department}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-600">진료과:</span>
+                      <span className="font-medium text-gray-900 dark:text-gray-900">{selectedRecord.department}</span>
                     </div>
                   </div>
                 </div>
-                <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-3">진단 정보</h3>
+                <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-3">진단 정보</h3>
                   <div className="space-y-2">
                     <div>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">진단명:</span>
-                      <p className="font-medium text-gray-900 dark:text-white mt-1">{selectedRecord.diagnosis}</p>
+                      <span className="text-sm text-gray-600 dark:text-gray-600">진단명:</span>
+                      <p className="font-medium text-gray-900 dark:text-gray-900 mt-1">{selectedRecord.diagnosis}</p>
                     </div>
                     <div>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">중요도:</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-600">중요도:</span>
                       <div className="mt-1">
                         <Badge className={getSeverityColor(selectedRecord.severity)}>
                           {getSeverityText(selectedRecord.severity)}
@@ -722,28 +722,28 @@ export default function MedicalRecordsPage() {
 
               {/* 상세 정보 */}
               <div className="space-y-4">
-                <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">증상</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{selectedRecord.symptoms}</p>
+                <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-2">증상</h3>
+                  <p className="text-gray-800 dark:text-gray-800">{selectedRecord.symptoms}</p>
                 </div>
-                <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">검사 결과</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{selectedRecord.testResults}</p>
+                <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-2">검사 결과</h3>
+                  <p className="text-gray-800 dark:text-gray-800">{selectedRecord.testResults}</p>
                 </div>
-                <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">처방</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{selectedRecord.prescription}</p>
+                <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-2">처방</h3>
+                  <p className="text-gray-800 dark:text-gray-800">{selectedRecord.prescription}</p>
                 </div>
                 {selectedRecord.notes && (
-                  <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">진료 메모</h3>
-                    <p className="text-gray-700 dark:text-gray-300">{selectedRecord.notes}</p>
+                  <div className="p-4 bg-gray-50 dark:bg-gray-100 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-900 mb-2">진료 메모</h3>
+                    <p className="text-gray-800 dark:text-gray-800">{selectedRecord.notes}</p>
                   </div>
                 )}
               </div>
 
               {/* 액션 버튼 */}
-              <div className="flex space-x-2 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex space-x-2 pt-4 border-t border-gray-200 dark:border-gray-300">
                 <Button
                   onClick={() => {
                     setShowDetailModal(false)
