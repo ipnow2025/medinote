@@ -337,7 +337,7 @@ export default function MedicalRecordsPage() {
                   <Filter className="mr-2 h-4 w-4 text-gray-400" />
                   <SelectValue placeholder="진료과 선택" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                   <SelectItem value="all">전체 진료과</SelectItem>
                   {departments.map((dept) => (
                     <SelectItem key={dept} value={dept}>
