@@ -773,22 +773,22 @@ export default function MedicalRecordsPage() {
 
       {/* 삭제 확인 다이얼로그 */}
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
-        <AlertDialogContent>
+        <AlertDialogContent className="bg-white dark:bg-white">
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
                 <Trash2 className="h-4 w-4 text-red-600 dark:text-red-400" />
               </div>
-              <span>진료 기록 삭제</span>
+              <span className="text-gray-900 dark:text-gray-900">진료 기록 삭제</span>
             </AlertDialogTitle>
-            <AlertDialogDescription className="text-base">
+            <AlertDialogDescription className="text-base text-gray-700 dark:text-gray-700">
               <strong>"{recordToDelete?.diagnosis}"</strong> 진료 기록을 정말 삭제하시겠습니까?
               <br />
               <span className="text-red-600 dark:text-red-400 font-medium">삭제된 기록은 복구할 수 없습니다.</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>취소</AlertDialogCancel>
+            <AlertDialogCancel className="text-gray-700 dark:text-gray-700">취소</AlertDialogCancel>
             <AlertDialogAction onClick={handleDeleteConfirm} className="bg-red-600 hover:bg-red-700 text-white">
               삭제하기
             </AlertDialogAction>
