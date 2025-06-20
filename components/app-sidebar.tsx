@@ -36,60 +36,70 @@ const menuItems = [
     url: "/dashboard",
     icon: LayoutDashboard,
     description: "전체 건강 현황 보기",
+    iconColor: "text-blue-500", // 파란색
   },
   {
     title: "진료 기록 관리",
     url: "/medical-records",
     icon: FileText,
     description: "진료 기록 입력 및 관리",
+    iconColor: "text-green-500", // 초록색
   },
   {
     title: "AI 추천 질문",
     url: "/ai-questions",
     icon: Brain,
     description: "AI가 추천하는 진료 질문",
+    iconColor: "text-purple-500", // 보라색
   },
   {
     title: "건강 상태 기록",
     url: "/vital-check",
     icon: Heart,
     description: "혈압, 혈당 등 건강 지표 기록",
+    iconColor: "text-red-500", // 빨간색
   },
   {
     title: "투약 관리",
     url: "/medications",
     icon: Pill,
     description: "복용 약물 관리",
+    iconColor: "text-yellow-500", // 노란색
   },
   {
     title: "OCR 자동 기록",
     url: "/ocr-record",
     icon: ScanText,
     description: "처방전 자동 인식 및 기록",
+    iconColor: "text-indigo-500", // 인디고색
   },
   {
     title: "AI 맞춤 운동 추천",
     url: "/exercise",
     icon: Dumbbell,
     description: "개인 맞춤 운동 프로그램",
+    iconColor: "text-orange-500", // 주황색
   },
   {
     title: "패밀리 계정 관리",
     url: "/family",
     icon: Users,
     description: "가족 구성원 건강 관리",
+    iconColor: "text-pink-500", // 핑크색
   },
   {
     title: "커뮤니티",
     url: "/community",
     icon: MessageCircle,
     description: "환자 커뮤니티 및 정보 공유",
+    iconColor: "text-teal-500", // 틸색
   },
   {
     title: "설정",
     url: "/settings",
     icon: Settings,
     description: "앱 설정 및 개인정보 관리",
+    iconColor: "text-gray-500", // 회색
   },
 ]
 
@@ -135,8 +145,8 @@ export function AppSidebar() {
                     `}
                   >
                     <a href={item.url} className="flex items-center space-x-3">
-                      <item.icon className="h-4 w-4" />
-                      <span className="font-medium">{item.title}</span>
+                      <item.icon className={`h-5 w-5 ${item.iconColor}`} />
+                      <span className="font-bold text-base">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -164,8 +174,8 @@ export function AppSidebar() {
                     `}
                   >
                     <a href={item.url} className="flex items-center space-x-3">
-                      <item.icon className="h-4 w-4" />
-                      <span className="font-medium">{item.title}</span>
+                      <item.icon className={`h-5 w-5 ${item.iconColor}`} />
+                      <span className="font-bold text-base">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -193,8 +203,8 @@ export function AppSidebar() {
                     `}
                   >
                     <a href={item.url} className="flex items-center space-x-3">
-                      <item.icon className="h-4 w-4" />
-                      <span className="font-medium">{item.title}</span>
+                      <item.icon className={`h-5 w-5 ${item.iconColor}`} />
+                      <span className="font-bold text-base">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
